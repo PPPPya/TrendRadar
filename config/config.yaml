@@ -113,16 +113,29 @@ rss:
       url: "https://hnrss.org/frontpage"
       # max_age_days: 1               # 示例：只推送1天内的文章
 
-    - id: "ruanyifeng"
-      name: "阮一峰的网络日志"
-      url: "http://www.ruanyifeng.com/blog/atom.xml"
-      # max_age_days: 7               # 示例：推送7天内的文章（更新较慢的博客）
+    - id: "HongKong"
+      name: "香港新闻"
+      url: "https://www.hongkongfp.com/feed/"
+      enabled: true
+      max_age_days: 1
     
     - id: "yahoo-finance"
       name: "雅虎财经"
       url: "https://finance.yahoo.com/news/rssindex"
       enabled: false                  # 禁用
 
+    - id: "aoteman"
+      name: "山姆奥特曼"
+      url: "http://blog.samaltman.com/posts.atom"
+      enabled: true
+      max_age_days: 1
+
+    - id: "ggg"
+      name: "香港新闻"
+      url: "https://news.mit.edu/rss/topic/science-technology-and-society"
+      enabled: false
+      max_age_days: 1
+      
     # 自定义源示例
     # - id: "custom-feed"
     #   name: "自定义源"
