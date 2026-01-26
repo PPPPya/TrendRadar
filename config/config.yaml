@@ -96,6 +96,18 @@ rss:
   # - 正整数：覆盖全局设置，只推送此天数内的文章
   # - 0：禁用此频道的新鲜度过滤，推送所有文章
   feeds:
+  - id: "elonmusk_x"
+    name: "Elon Musk (@elonmusk) X 动态"
+    url: "https://rss.app/feeds/oybld2QtC6cmQwYy.xml"
+    enabled: true
+    max_age_days: 1  
+    
+  - id: "realdonaldtrump_x"
+    name: "Donald Trump (@realDonaldTrump) X 动态"
+    url: "https://rss.app/feeds/OxSdevJ0enE0BT5C.xml"   
+    enabled: true
+    max_age_days: 1
+    
     - id: "hacker-news"
       name: "Hacker News"
       url: "https://hnrss.org/frontpage"
