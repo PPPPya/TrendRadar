@@ -285,9 +285,23 @@ display:
   #   - RSS 源内容较少，希望全部展示而非只显示关键词匹配的
   # 注意：同一新闻可能同时出现在关键词匹配区和独立展示区
   standalone:
-    platforms: []                     # 热榜平台 ID 列表（如 ["zhihu", "weibo"]）
-    rss_feeds: ["elonmusk_x","realdonaldtrump_x","pnas","thelancet",""nejm","jama","nature-reviews","arxiv-cs","biorxiv","physorg","sciam""nature","science","cell"]                     # RSS 源 ID 列表（如 ["hacker-news"]）
-    max_items: 0                     # 每个源最多展示条数（0=不限制）
+  platforms: []                     # 热榜平台 ID 列表（如 ["zhihu", "weibo"]）
+  rss_feeds:
+    - "elonmusk_x"
+    - "realdonaldtrump_x"
+    - "pnas"
+    - "thelancet"
+    - "nejm"
+    - "jama"
+    - "nature-reviews"
+    - "arxiv-cs"
+    - "biorxiv"
+    - "physorg"
+    - "sciam"
+    - "nature"
+    - "science"
+    - "cell"
+  max_items: 0                     # 每个源最多展示条数（0=不限制）
 
 
 # ===============================================================
