@@ -1,7 +1,10 @@
 # ═══════════════════════════════════════════════════════════════
 #                    TrendRadar 配置文件
-#                      Version: 1.0.0
+#                      Version: 1.1.0
 # ═══════════════════════════════════════════════════════════════
+
+
+# 可视化配置编辑器地址: https://sansan0.github.io/TrendRadar/
 
 
 # ===============================================================
@@ -55,6 +58,9 @@ platforms:
       name: "掘金"
     - id: "github"
       name: "GitHub"
+    - id: "jin10-realtime"
+      name: "金十数据"
+
 
 # ===============================================================
 # 3. 数据源 - RSS 订阅
@@ -89,17 +95,11 @@ rss:
   # - 正整数：覆盖全局设置，只推送此天数内的文章
   # - 0：禁用此频道的新鲜度过滤，推送所有文章
   feeds:
-    - id: "jin10-realtime"
-      name: "金十数据"
-      url: "https://www.jin10.com/rss/news.xml"
-      enabled: true
-      max_age_days: 1
-      
     - id: "elonmusk_x"
       name: "Elon Musk (@elonmusk) X 动态"
       url: "https://rss.app/feeds/oybld2QtC6cmQwYy.xml"
       enabled: true
-      max_age_days: 3  
+      max_age_days: 2  
     
     - id: "realdonaldtrump_x"
       name: "Donald Trump (@realDonaldTrump) X 动态"
@@ -107,22 +107,12 @@ rss:
       enabled: true
       max_age_days: 3
     
-    - id: "hacker-news"
-      name: "Hacker News"
-      url: "https://hnrss.org/frontpage"
-      # max_age_days: 1               # 示例：只推送1天内的文章
-
     - id: "HongKong"
       name: "香港新闻"
       url: "https://www.hongkongfp.com/feed/"
       enabled: true
       max_age_days: 1
     
-    - id: "yahoo-finance"
-      name: "雅虎财经"
-      url: "https://finance.yahoo.com/news/rssindex"
-      enabled: false                  # 禁用
-
     - id: "aoteman"
       name: "山姆奥特曼"
       url: "http://blog.samaltman.com/posts.atom"
@@ -133,73 +123,64 @@ rss:
       name: "Nature 主刊"
       url: "https://www.nature.com/nature.rss"
       enabled: true
-      max_age_days: 3
+      max_age_days: 1
       
     - id: "science"
       name: "Science 最新"
       url: "https://www.science.org/rss/current.xml"
       enabled: true
-      max_age_days: 3
+      max_age_days: 1
       
     - id: "cell"
       name: "Cell 最新"
       url: "https://www.cell.com/cell/current.rss"
       enabled: true
-      max_age_days: 3
+      max_age_days: 1
 
     - id: "pnas"
       name: "PNAS (美国科学院院刊) 最新"
       url: "https://www.pnas.org/rss/current.xml"
       enabled: true
-      max_age_days: 3
+      max_age_days: 1
       
     - id: "thelancet"
       name: "The Lancet (柳叶刀) 最新"
       url: "https://www.thelancet.com/rss/journals/lancet/current.xml"
       enabled: true
-      max_age_days: 3
+      max_age_days: 1
       
     - id: "nejm"
       name: "NEJM (新英格兰医学杂志) 最受欢迎文章"
       url: "https://www.nejm.org/action/getRssFeed?type=most-viewed"
       enabled: true
-      max_age_days: 3
+      max_age_days: 1
 
     - id: "jama"
       name: "JAMA (美国医学会杂志) 最新"
       url: "https://jamanetwork.com/journals/jama/rss"
       enabled: true
-      max_age_days: 3
+      max_age_days: 1
 
     - id: "nature-reviews"
       name: "Nature Reviews 系列综述"
       url: "https://www.nature.com/natrevs/rss"
       enabled: true
-      max_age_days: 3
+      max_age_days: 1
 
     - id: "arxiv-cs"
       name: "arXiv 计算机科学最新预印本"
       url: "https://arxiv.org/rss/cs.recent.xml"
       enabled: true
-      max_age_days: 3
+      max_age_days: 1
 
     - id: "biorxiv"
       name: "bioRxiv 生物学最新预印本"
       url: "https://connect.biorxiv.org/relate/content/rss"
       enabled: true
-      max_age_days: 3
+      max_age_days: 1
 
-    - id: "physorg"
-      name: "Phys.org 科学新闻汇总"
-      url: "https://phys.org/rss-feed/"
-      enabled: true
-      max_age_days: 2   # 新闻类建议短一些，避免重复
 
-    - id: "sciam"
-      name: "Scientific American 科学美国人"
-      url: "https://www.scientificamerican.com/feed/"
-      enabled: true
-      max_age_days: 3
+
     # 自定义源示例
     # - id: "custom-feed"
     #   name: "自定义源"
@@ -261,48 +242,21 @@ display:
   #   2. 下方 regions 中对应开关为 true
   region_order:
     - new_items                       # 1️⃣ 新增热点区域
-    - hotlist                         # 2️⃣ 热榜区域（关键词匹配）
-    - rss                             # 3️⃣ RSS 订阅区域
-    - standalone                      # 4️⃣ 独立展示区
-    - ai_analysis                     # 5️⃣ AI 分析区域
-
-  # 推送区域开关
-  # 控制各区域是否启用（配合 region_order 使用）
+    - hotlist                       # 2️⃣ 热榜区域（关键词匹配）
+    - rss                       # 3️⃣ RSS 订阅区域
+    - standalone                       # 4️⃣ 独立展示区
+    - ai_analysis                       # 5️⃣ AI 分析区域
   regions:
-    hotlist: true                     # 热榜区域（关键词匹配的热点新闻）
-    new_items: true                   # 新增热点区域（含热榜新增 + RSS 新增）
-                                      # 注：热点词汇统计中的新增标记🆕不受此配置影响
-
-    rss: true                         # RSS 订阅区域
-                                      # 开启后将对 RSS 进行关键词分析并在通知中展示
-                                      # 关闭后跳过分析，但独立展示区不受影响
-
-    standalone: true                 # 独立展示区（完整热榜/RSS，不受关键词过滤）
-    ai_analysis: true                 # AI 分析区域
-
-  # 📋 独立展示区配置（仅在 regions.standalone: true 时生效）
-  # 用途：将指定平台的完整热榜/RSS 单独展示，不受关键词过滤影响
-  # 适用场景：
-  #   - 想完整查看某个平台的热榜排名
-  #   - RSS 源内容较少，希望全部展示而非只显示关键词匹配的
-  # 注意：同一新闻可能同时出现在关键词匹配区和独立展示区
+    new_items: true # 新增热点区域（含热榜新增 + RSS 新增）
+    hotlist: true # 热榜区域（关键词匹配的热点新闻）
+    rss: true # RSS 订阅区域
+    standalone: true # 独立展示区（完整热榜/RSS，不受关键词过滤）
+    ai_analysis: true # AI 分析区域
   standalone:
     platforms: []                     # 热榜平台 ID 列表（如 ["zhihu", "weibo"]）
     rss_feeds:
       - "elonmusk_x"
-      - "realdonaldtrump_x"
-      - "pnas"
-      - "thelancet"
-      - "nejm"
-      - "jama"
-      - "nature-reviews"
-      - "arxiv-cs"
-      - "biorxiv"
-      - "physorg"
-      - "sciam"
-      - "nature"
-      - "science"
-      - "cell"
+      - "realdonaldtrump_x"                   # RSS 源 ID 列表（如 ["hacker-news"]）
     max_items: 0                     # 每个源最多展示条数（0=不限制）
 
 
@@ -468,7 +422,7 @@ ai:
   temperature: 1.0                  # 采样温度 (0.0-2.0)
                                     # 注意：部分模型(如 gpt-5)可能要求必须为 1.0，否则会报错
   
-  max_tokens: 5000                  # 最大生成 token 数
+  max_tokens: 2000                  # 最大生成 token 数
                                     # 注意：如果 API 不支持此参数(报 HTTP 400)，请设为 0 以禁用发送
   # 高级选项
   num_retries: 1                    # 失败重试次数
@@ -510,8 +464,8 @@ ai_analysis:
   # 💡 想要精准定时？建议使用 Docker 部署在个人服务器上
   analysis_window:
     enabled: false                  # 是否启用 AI 分析时间窗口控制
-    start: "9:00"                  # 开始时间（使用 app.timezone 配置的时区）
-    end: "23:00"                    # 结束时间（使用 app.timezone 配置的时区）
+    start: "12:00"                  # 开始时间（使用 app.timezone 配置的时区）
+    end: "21:00"                    # 结束时间（使用 app.timezone 配置的时区）
     once_per_day: false             # true=窗口内只分析一次，false=窗口内每次执行都分析
 
   # 分析报告输出语言
