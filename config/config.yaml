@@ -126,13 +126,78 @@ rss:
       url: "http://blog.samaltman.com/posts.atom"
       enabled: true
       max_age_days: 1
-
-    - id: "ggg"
-      name: "香港新闻"
-      url: "https://news.mit.edu/rss/topic/science-technology-and-society"
-      enabled: false
-      max_age_days: 1
       
+    - id: "nature"
+      name: "Nature 主刊"
+      url: "https://www.nature.com/nature.rss"
+      enabled: true
+      max_age_days: 7
+      
+    - id: "science"
+      name: "Science 最新"
+      url: "https://www.science.org/rss/current.xml"
+      enabled: true
+      max_age_days: 7
+      
+    - id: "cell"
+      name: "Cell 最新"
+      url: "https://www.cell.com/cell/current.rss"
+      enabled: true
+      max_age_days: 7
+
+    - id: "pnas"
+      name: "PNAS (美国科学院院刊) 最新"
+      url: "https://www.pnas.org/rss/current.xml"
+      enabled: true
+      max_age_days: 7
+      
+    - id: "thelancet"
+      name: "The Lancet (柳叶刀) 最新"
+      url: "https://www.thelancet.com/rss/journals/lancet/current.xml"
+      enabled: true
+      max_age_days: 7
+      
+    - id: "nejm"
+      name: "NEJM (新英格兰医学杂志) 最受欢迎文章"
+      url: "https://www.nejm.org/action/getRssFeed?type=most-viewed"
+      enabled: true
+      max_age_days: 7
+
+    - id: "jama"
+      name: "JAMA (美国医学会杂志) 最新"
+      url: "https://jamanetwork.com/journals/jama/rss"
+      enabled: true
+      max_age_days: 7
+
+    - id: "nature-reviews"
+      name: "Nature Reviews 系列综述"
+      url: "https://www.nature.com/natrevs/rss"
+      enabled: true
+      max_age_days: 7
+
+    - id: "arxiv-cs"
+      name: "arXiv 计算机科学最新预印本"
+      url: "https://arxiv.org/rss/cs.recent.xml"
+      enabled: true
+      max_age_days: 7
+
+    - id: "biorxiv"
+      name: "bioRxiv 生物学最新预印本"
+      url: "https://connect.biorxiv.org/relate/content/rss"
+      enabled: true
+      max_age_days: 7
+
+    - id: "physorg"
+      name: "Phys.org 科学新闻汇总"
+      url: "https://phys.org/rss-feed/"
+      enabled: true
+      max_age_days: 3   # 新闻类建议短一些，避免重复
+
+    - id: "sciam"
+      name: "Scientific American 科学美国人"
+      url: "https://www.scientificamerican.com/feed/"
+      enabled: true
+      max_age_days: 7
     # 自定义源示例
     # - id: "custom-feed"
     #   name: "自定义源"
@@ -221,7 +286,7 @@ display:
   # 注意：同一新闻可能同时出现在关键词匹配区和独立展示区
   standalone:
     platforms: []                     # 热榜平台 ID 列表（如 ["zhihu", "weibo"]）
-    rss_feeds: ["elonmusk_x", "realdonaldtrump_x"]                     # RSS 源 ID 列表（如 ["hacker-news"]）
+    rss_feeds: ["elonmusk_x","realdonaldtrump_x","pnas","thelancet",""nejm","jama","nature-reviews","arxiv-cs","biorxiv","physorg","sciam""nature","science","cell"]                     # RSS 源 ID 列表（如 ["hacker-news"]）
     max_items: 0                     # 每个源最多展示条数（0=不限制）
 
 
