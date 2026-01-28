@@ -57,8 +57,6 @@ platforms:
       name: "掘金"
     - id: "github"
       name: "GitHub"
-    - id: "jin10"
-      name: "金十数据"
 
 # ===============================================================
 # 3. 数据源 - RSS 订阅
@@ -93,6 +91,12 @@ rss:
   # - 正整数：覆盖全局设置，只推送此天数内的文章
   # - 0：禁用此频道的新鲜度过滤，推送所有文章
   feeds:
+  - id: "jin10-realtime"
+      name: "金十数据 实时快讯"
+      url: "https://www.jin10.com/rss/news.xml"
+      enabled: true
+      max_age_days: 1
+      
     - id: "elonmusk_x"
       name: "Elon Musk (@elonmusk) X 动态"
       url: "https://rss.app/feeds/oybld2QtC6cmQwYy.xml"
@@ -131,73 +135,73 @@ rss:
       name: "Nature 主刊"
       url: "https://www.nature.com/nature.rss"
       enabled: true
-      max_age_days: 7
+      max_age_days: 3
       
     - id: "science"
       name: "Science 最新"
       url: "https://www.science.org/rss/current.xml"
       enabled: true
-      max_age_days: 7
+      max_age_days: 3
       
     - id: "cell"
       name: "Cell 最新"
       url: "https://www.cell.com/cell/current.rss"
       enabled: true
-      max_age_days: 7
+      max_age_days: 3
 
     - id: "pnas"
       name: "PNAS (美国科学院院刊) 最新"
       url: "https://www.pnas.org/rss/current.xml"
       enabled: true
-      max_age_days: 7
+      max_age_days: 3
       
     - id: "thelancet"
       name: "The Lancet (柳叶刀) 最新"
       url: "https://www.thelancet.com/rss/journals/lancet/current.xml"
       enabled: true
-      max_age_days: 7
+      max_age_days: 3
       
     - id: "nejm"
       name: "NEJM (新英格兰医学杂志) 最受欢迎文章"
       url: "https://www.nejm.org/action/getRssFeed?type=most-viewed"
       enabled: true
-      max_age_days: 7
+      max_age_days: 3
 
     - id: "jama"
       name: "JAMA (美国医学会杂志) 最新"
       url: "https://jamanetwork.com/journals/jama/rss"
       enabled: true
-      max_age_days: 7
+      max_age_days: 3
 
     - id: "nature-reviews"
       name: "Nature Reviews 系列综述"
       url: "https://www.nature.com/natrevs/rss"
       enabled: true
-      max_age_days: 7
+      max_age_days: 3
 
     - id: "arxiv-cs"
       name: "arXiv 计算机科学最新预印本"
       url: "https://arxiv.org/rss/cs.recent.xml"
       enabled: true
-      max_age_days: 7
+      max_age_days: 3
 
     - id: "biorxiv"
       name: "bioRxiv 生物学最新预印本"
       url: "https://connect.biorxiv.org/relate/content/rss"
       enabled: true
-      max_age_days: 7
+      max_age_days: 3
 
     - id: "physorg"
       name: "Phys.org 科学新闻汇总"
       url: "https://phys.org/rss-feed/"
       enabled: true
-      max_age_days: 3   # 新闻类建议短一些，避免重复
+      max_age_days: 2   # 新闻类建议短一些，避免重复
 
     - id: "sciam"
       name: "Scientific American 科学美国人"
       url: "https://www.scientificamerican.com/feed/"
       enabled: true
-      max_age_days: 7
+      max_age_days: 3
     # 自定义源示例
     # - id: "custom-feed"
     #   name: "自定义源"
