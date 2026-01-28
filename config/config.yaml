@@ -91,7 +91,7 @@ rss:
   # - 正整数：覆盖全局设置，只推送此天数内的文章
   # - 0：禁用此频道的新鲜度过滤，推送所有文章
   feeds:
-  - id: "jin10-realtime"
+   - id: "jin10-realtime"
       name: "金十数据 实时快讯"
       url: "https://www.jin10.com/rss/news.xml"
       enabled: true
