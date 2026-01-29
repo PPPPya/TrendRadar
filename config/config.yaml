@@ -57,8 +57,6 @@ platforms:
       name: "掘金"
     - id: "github"
       name: "GitHub"
-    - id: "jin10-realtime"
-      name: "金十数据"
 
 
 # ===============================================================
@@ -253,9 +251,7 @@ display:
     ai_analysis: true # AI 分析区域
   standalone:
     platforms: []                     # 热榜平台 ID 列表（如 ["zhihu", "weibo"]）
-    rss_feeds:
-      - "elonmusk_x"
-      - "realdonaldtrump_x"                   # RSS 源 ID 列表（如 ["hacker-news"]）
+    rss_feeds:[]                 # RSS 源 ID 列表（如 ["hacker-news"]）
     max_items: 0                     # 每个源最多展示条数（0=不限制）
 
 
