@@ -139,44 +139,6 @@ rss:
       url: "https://www.pnas.org/rss/current.xml"
       enabled: true
       max_age_days: 1
-      
-    - id: "thelancet"
-      name: "The Lancet (柳叶刀) 最新"
-      url: "https://www.thelancet.com/rss/journals/lancet/current.xml"
-      enabled: true
-      max_age_days: 1
-      
-    - id: "nejm"
-      name: "NEJM (新英格兰医学杂志) 最受欢迎文章"
-      url: "https://www.nejm.org/action/getRssFeed?type=most-viewed"
-      enabled: true
-      max_age_days: 1
-
-    - id: "jama"
-      name: "JAMA (美国医学会杂志) 最新"
-      url: "https://jamanetwork.com/journals/jama/rss"
-      enabled: true
-      max_age_days: 1
-
-    - id: "nature-reviews"
-      name: "Nature Reviews 系列综述"
-      url: "https://www.nature.com/natrevs/rss"
-      enabled: true
-      max_age_days: 1
-
-    - id: "arxiv-cs"
-      name: "arXiv 计算机科学最新预印本"
-      url: "https://arxiv.org/rss/cs.recent.xml"
-      enabled: true
-      max_age_days: 1
-
-    - id: "biorxiv"
-      name: "bioRxiv 生物学最新预印本"
-      url: "https://connect.biorxiv.org/relate/content/rss"
-      enabled: true
-      max_age_days: 1
-
-
 
     # 自定义源示例
     # - id: "custom-feed"
@@ -256,12 +218,6 @@ display:
     - "science"
     - "cell"
     - "pnas"
-    - "thelancet"
-    - "nejm"
-    - "jama"
-    - "nature-reviews"
-    - "arxiv-cs"
-    - "biorxiv"
     - "sciam"
     - "realdonaldtrump_x"
     - "elonmusk_x"
@@ -525,7 +481,7 @@ ai_analysis:
 # 模型配置见上方 ai 配置段
 # ===============================================================
 ai_translation:
-  enabled: true                    # 是否启用翻译功能
+  enabled: false                    # 是否启用翻译功能
 
   # 翻译目标语言
   # 格式：自然语言描述
@@ -544,9 +500,6 @@ advanced:
   debug: false
 
   # 版本检查
-  version_check_url: "https://raw.githubusercontent.com/sansan0/TrendRadar/refs/heads/master/version"
-  mcp_version_check_url: "https://raw.githubusercontent.com/sansan0/TrendRadar/refs/heads/master/version_mcp"
-  configs_version_check_url: "https://raw.githubusercontent.com/sansan0/TrendRadar/refs/heads/master/version_configs"
 
   # 热榜爬虫技术参数
   crawler:
