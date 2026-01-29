@@ -327,7 +327,7 @@ storage:
   formats:
     sqlite: true                      # 主存储（必须启用）
     txt: false                        # 是否生成 TXT 快照
-    html: true                       # 是否生成 HTML 报告（⚠️ 邮件推送或者需要看网页版报告必须设为 true）
+    html: false                       # 是否生成 HTML 报告（⚠️ 邮件推送或者需要看网页版报告必须设为 true）
 
   # 本地存储配置
   local:
@@ -397,7 +397,7 @@ ai:
   temperature: 0.6                  # 采样温度 (0.0-2.0)
                                     # 注意：部分模型(如 gpt-5)可能要求必须为 1.0，否则会报错
   
-  max_tokens: 2000                 # 最大生成 token 数
+  max_tokens: 1000                # 最大生成 token 数
                                     # 注意：如果 API 不支持此参数(报 HTTP 400)，请设为 0 以禁用发送
   # 高级选项
   num_retries: 1                    # 失败重试次数
